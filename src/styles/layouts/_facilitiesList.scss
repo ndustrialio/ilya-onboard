@@ -1,0 +1,14 @@
+.facilities-list__container {
+  display: flex;
+  justify-content: center;
+
+  margin: 5em 0;
+}
+
+.facilities-list__loader {
+  flex-direction: column;
+
+  .spinner {
+    flex: 1;
+  }
+}

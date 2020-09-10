@@ -1,0 +1,7 @@
+--require babel-register
+--require ignore-styles
+--require mock-local-storage
+--require test/config/mocha-setup
+--require test/config/addons
+--require test/config/enzyme-adapter
+--require test/config/globals

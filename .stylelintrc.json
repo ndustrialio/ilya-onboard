@@ -1,0 +1,6 @@
+{
+  "extends": [
+    "@ndustrial/stylelint-config-ndustrial",
+    "stylelint-config-prettier"
+  ]
+}

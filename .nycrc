@@ -1,0 +1,20 @@
+{
+  "reporter": [
+    "lcov",
+    "text",
+    "html"
+  ],
+  "require": [
+    "babel-register"
+  ],
+  "include": [
+    "src/**/*.js"
+  ],
+  "exclude": [
+    "node_modules",
+    "index.js",
+    "*_spec.js"
+  ],
+  "sourceMap": false,
+  "instrument": false
+}

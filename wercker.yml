@@ -1,0 +1,53 @@
+box: node:10.15.2
+
+build:
+    steps:
+
+    - script:
+        name: set env to development
+        code: export NODE_ENV=development
+
+    - script:
+        name: Export NPM Token
+        code: export NPM_TOKEN=$NPM_TOKEN
+
+    - npm-install:
+        use-cache: false
+
+    - script:
+        name: lint styles
+        code: npm run lint:styles
+
+    - script:
+        name: lint js
+        code: npm run lint:js
+
+    - script:
+        name: run tests
+        code: npm run coverage
+
+    - script:
+        name: build production resources
+        code: npm run build
+
+quay:
+    steps:
+
+    - script:
+        name: set env to production
+        code: export NODE_ENV='production'
+
+    - script:
+        name: remove .npmrc file
+        code: rm $WERCKER_ROOT/.npmrc
+
+    - internal/docker-push:
+        username: $QUAY_USERNAME
+        password: $QUAY_PASSWORD
+        tag: $WERCKER_GIT_COMMIT
+        env: NPM_TOKEN=$NPM_TOKEN
+        cmd: "npm run serve"
+        ports: "80"
+        working-dir: /pipeline/source
+        repository: quay.io/ndustrialio/react-starter
+        registry: https://quay.io

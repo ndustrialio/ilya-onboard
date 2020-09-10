@@ -1,0 +1,61 @@
+html {
+  font-size: $nd-font-size;
+  font-family: $font-primary;
+  font-weight: 100;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.healthy {
+  font-weight: 700;
+  color: var(--nd-color-healthy);
+}
+
+.degraded {
+  font-weight: 700;
+  color: var(--nd-color-degraded);
+}
+
+.critical {
+  font-weight: 700;
+  color: var(--nd-color-critical);
+}
+
+[contentEditable] {
+  display: inline-block;
+  position: relative;
+  border: 1px solid var(--nd-color-border);
+  padding: $default-spacing;
+  padding-right: 50px;
+  transition: $default-transition;
+
+  &::after {
+    @include rem(12);
+    font-family: 'icomoon';
+    content: '\e90f';
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #bebebe;
+    top: 0;
+    right: 0;
+    height: 100%;
+    padding-right: $default-spacing;
+    cursor: pointer;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  &:focus {
+    border: 1px solid var(--nd-color-link);
+    outline: none;
+  }
+}

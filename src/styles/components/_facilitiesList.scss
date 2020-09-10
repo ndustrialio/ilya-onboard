@@ -1,0 +1,9 @@
+.facilities-list {
+  padding: $default-spacing;
+  background-color: $white;
+}
+
+.facilities-list__count {
+  color: var(--nd-color-primary);
+  font-weight: bold;
+}

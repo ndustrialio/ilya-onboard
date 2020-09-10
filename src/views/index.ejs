@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimal-ui">
+    <title>ndustrial.io</title>
+    <script>
+      window.nd = <%= JSON.stringify(htmlWebpackPlugin.options.config) %>;
+    </script>
+    <base href="/" />
+  </head>
+  <body>
+    <div id="main"></div>
+  </body>
+</html>
