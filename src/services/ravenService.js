@@ -22,7 +22,7 @@ const ravenService = {
   },
 
   reportException(err, profile) {
-    let options = { extra: {} };
+    const options = { extra: {} };
 
     if (profile) {
       Raven.setUserContext({ id: profile.sub });
