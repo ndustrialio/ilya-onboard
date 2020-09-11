@@ -49,5 +49,5 @@ quay:
         cmd: "npm run serve"
         ports: "80"
         working-dir: /pipeline/source
-        repository: quay.io/ndustrialio/react-starter
+        repository: quay.io/ndustrialio/ilya-onboard
         registry: https://quay.io
