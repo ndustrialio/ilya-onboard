@@ -18,7 +18,6 @@ const routes = (
   <Provider store={store}>
     <Router history={history}>
       <RoutesWithAuth path="/" />
-      <div>Quay/Werker test</div>
     </Router>
   </Provider>
 );
