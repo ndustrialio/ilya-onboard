@@ -10,15 +10,18 @@ import { Provider } from 'react-redux';
 import createStore from './createStore';
 
 import './styles/styles.scss';
+import { APIProvider } from './api';
 
 const RoutesWithAuth = withAuth(Routes, history);
 const store = createStore();
 
 const routes = (
   <Provider store={store}>
-    <Router history={history}>
-      <RoutesWithAuth path="/" />
-    </Router>
+    <APIProvider>
+      <Router history={history}>
+        <RoutesWithAuth path="/" />
+      </Router>
+    </APIProvider>
   </Provider>
 );
 

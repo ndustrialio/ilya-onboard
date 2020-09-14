@@ -25,6 +25,7 @@ describe('routes/Routes', function() {
 
     beforeEach(function() {
       routes = shallow(<Routes {...baseProps} />);
+      console.log('The routes are: ', routes.instance().auth.logout.name);
     });
 
     it('binds a copy of logout to the instance', function() {

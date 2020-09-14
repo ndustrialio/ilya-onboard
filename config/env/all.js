@@ -3,7 +3,13 @@ module.exports = {
   // Replace these client ID's with ones meant for your application.
   // These are shown in contxt.
   application: {
-    clientId: 'Jlrp6SjjpTP7RlrNi8exIkCxeuWZmRDW'
+    clientId: '2AmdGndIoVr2ZskAzt2970iC4AAY6qbq'
+  },
+  externalModules: {
+    feeds: {
+      clientId: 'iznTb30Sfp2Jpaf398I5DN6MyPuDCftA',
+      host: 'https://feeds.api.ndustrial.io'
+    }
   },
   sentry: {
     // TODO:

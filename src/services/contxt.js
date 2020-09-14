@@ -1,5 +1,6 @@
 import ContxtSdk from '@ndustrial/contxt-sdk';
 import ravenService from './ravenService';
+import FeedsService from './feedsService';
 
 const contxtSdk = new ContxtSdk({
   config: {
@@ -10,7 +11,14 @@ const contxtSdk = new ContxtSdk({
           env: 'production'
         }
       },
-      env: 'staging'
+      env: 'production'
+    },
+    externalModules: {
+      feeds: {
+        clientId: window.nd.externalModules.feeds.clientId,
+        host: window.nd.externalModules.feeds.host,
+        module: FeedsService
+      }
     },
     interceptors: {
       response: [

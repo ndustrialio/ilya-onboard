@@ -22,7 +22,7 @@ function getDevTool() {
 
 module.exports = {
   entry: {
-    'static/js/bundle.js': ['whatwg-fetch', Paths.ENTRY]
+    'static/js/bundle.js': [Paths.ENTRY]
   },
   output: {
     path: Paths.DIST,

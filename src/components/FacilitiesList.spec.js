@@ -1,5 +1,5 @@
 import React from 'react';
-import FacilitiesList from './FacilitiesList';
+import Facilities from './Facilities';
 
 describe('<FacilitiesList />', function() {
   let baseProps;
@@ -17,7 +17,7 @@ describe('<FacilitiesList />', function() {
     let facilitiesList;
 
     beforeEach(function() {
-      facilitiesList = shallow(<FacilitiesList {...baseProps} />);
+      facilitiesList = shallow(<Facilities {...baseProps} />);
     });
 
     it('displays the number of facilities', function() {

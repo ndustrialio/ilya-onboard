@@ -5,5 +5,7 @@
       "plugins": ["istanbul"]
     }
   },
-  "ignore": ["src/data", "bundle.js", "data/code.xml"]
+  "ignore": ["src/data", "bundle.js", "data/code.xml"],
+  "plugins": ["transform-async-to-generator", "babel-plugin-transform-regenerator"]
+
 }

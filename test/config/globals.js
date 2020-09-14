@@ -18,5 +18,8 @@ window.nd = {
   },
   sentry: {
     dataSourceName: `${faker.internet.url()}/`
+  },
+  externalModules: {
+    feeds: faker.random.uuid()
   }
 };

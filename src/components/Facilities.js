@@ -5,7 +5,7 @@ const propTypes = {
   facilities: PropTypes.array.isRequired
 };
 
-function FacilitiesList({ facilities }) {
+function Facilities({ facilities }) {
   return (
     <div className="facilities-list">
       Welcome to your new React app. You have{' '}
@@ -15,6 +15,6 @@ function FacilitiesList({ facilities }) {
   );
 }
 
-FacilitiesList.propTypes = propTypes;
+Facilities.propTypes = propTypes;
 
-export default FacilitiesList;
+export default Facilities;
