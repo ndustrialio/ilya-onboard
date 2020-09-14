@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import NotFound from '../components/NotFound';
-import FacilitiesList from '../containers/FacilitiesList';
+// import FacilitiesList from '../containers/FacilitiesList';
 import TemperatureFeed from '../containers/TemperatureFeed';
 
 export default class Routes extends React.Component {

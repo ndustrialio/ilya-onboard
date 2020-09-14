@@ -14,9 +14,9 @@ APIProvider.propTypes = {
   children: PropTypes.element.isRequired
 };
 
-export const withAPI = (Component) => (props) => (
+export const withAPI = (ComponentWithApi) => (props) => (
   <APIContext.Consumer>
-    {(value) => <Component {...props} api={value} />}
+    {(value) => <ComponentWithApi {...props} api={value} />}
   </APIContext.Consumer>
 );
 

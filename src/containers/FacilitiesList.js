@@ -22,9 +22,7 @@ class FacilitiesList extends Component {
   }
 
   render() {
-    console.log(contxtSdk);
     window.contxt = contxtSdk;
-    //
 
     return (
       <div className="facilities-list__container">
