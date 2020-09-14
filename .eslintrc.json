@@ -5,7 +5,6 @@
     "mocha": true,
     "node": true
   },
-  "extends": ["ndustrial", "plugin:react/recommended", "prettier"],
   "parser": "babel-eslint",
   "parserOptions": {
     "ecmaVersion": 6,
@@ -21,7 +20,6 @@
     "sandbox": true,
     "shallow": true
   },
-  "plugins": ["react"],
   "rules": {
     "no-unused-expressions": "off"
   },
