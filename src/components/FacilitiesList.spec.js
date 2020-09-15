@@ -1,7 +1,7 @@
 import React from 'react';
 import Facilities from './Facilities';
 
-describe('<FacilitiesList />', function() {
+describe('<Facilities />', function() {
   let baseProps;
 
   beforeEach(function() {

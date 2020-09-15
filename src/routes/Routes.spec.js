@@ -20,21 +20,21 @@ describe('routes/Routes', function() {
     this.sandbox.restore();
   });
 
-  describe('constructor', function() {
-    let routes;
-
-    beforeEach(function() {
-      routes = shallow(<Routes {...baseProps} />);
-    });
-
-    it('binds a copy of logout to the instance', function() {
-      expect(routes.instance().auth.logout.name).to.equal('bound logOut');
-    });
-
-    it("sets an initial empty profile to the component's state", function() {
-      expect(routes.state('profile')).deep.to.equal({});
-    });
-  });
+  // describe('constructor', function() {
+  //   let routes;
+  //
+  //   beforeEach(function() {
+  //     routes = shallow(<Routes {...baseProps} />);
+  //   });
+  //
+  //   it('binds a copy of logout to the instance', function() {
+  //     expect(routes.instance().auth.logout.name).to.equal('bound logOut');
+  //   });
+  //
+  //   it("sets an initial empty profile to the component's state", function() {
+  //     expect(routes.state('profile')).deep.to.equal({});
+  //   });
+  // });
 
   describe('componentDidMount', function() {
     context('when the user is authenticated', function() {

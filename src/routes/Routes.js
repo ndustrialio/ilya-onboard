@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import NotFound from '../components/NotFound';
-// import FacilitiesList from '../containers/FacilitiesList';
 import TemperatureFeed from '../containers/TemperatureFeed';
+import FacilitiesList from '../containers/FacilitiesList';
 
 export default class Routes extends React.Component {
   static propTypes = {
@@ -48,6 +48,7 @@ export default class Routes extends React.Component {
         />
         <Switch>
           <Route path="/" exact={true} component={TemperatureFeed} />
+          <Route path="/facilities" exact={true} component={FacilitiesList} />
           <Route component={NotFound} />
         </Switch>
       </div>
