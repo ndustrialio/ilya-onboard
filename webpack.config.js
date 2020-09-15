@@ -1,9 +1,15 @@
 const webpack = require('webpack');
-const path = require('path');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path');
 
 const clientConfig = require('./config');
+const htmlConfig = {
+  meta: {
+    viewport: 'width=device-width, intial-scale=1'
+  }
+};
+
 const port = process.env.PORT || 5000;
 
 const Paths = {
@@ -19,6 +25,10 @@ function getDevTool() {
 
   return false;
 }
+
+// const baseConfig = {
+//   entry: ''
+// }
 
 module.exports = {
   entry: {
