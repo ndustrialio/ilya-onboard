@@ -1,43 +1,37 @@
 import {
-  LOAD_FEEDS,
-  LOAD_FEEDS_SUCCESS,
-  LOAD_FEEDS_FAILURE
+  loadTemperatureOutputFailed,
+  loadTemperatureOutput,
+  setTemperatureOutput
 } from '../actions/feeds';
 
 import { updateState } from './helpers';
+import { createReducer } from '@reduxjs/toolkit';
 
 const INITIAL_STATE = {
   isLoading: true,
-  temperatureOutput: {},
+  temperatureOutput: [],
   error: null
 };
 
-function reducer(state = INITIAL_STATE, action) {
-  switch (action.type) {
-    case LOAD_FEEDS:
-      return updateState(state, {
-        isLoading: true,
-        error: INITIAL_STATE.error,
-        temperatureOutput: INITIAL_STATE.temperatureOutput
-      });
+const reducer = createReducer(INITIAL_STATE, {
+  [loadTemperatureOutput]: (state, action) =>
+    updateState(state, {
+      isLoading: true,
+      error: INITIAL_STATE.error,
+      temperatureOutput: INITIAL_STATE.temperatureOutput
+    }),
 
-    case LOAD_FEEDS_SUCCESS:
-      return {
-        ...state,
-        isLoading: false,
-        temperatureOutput: action.payload
-      };
+  [setTemperatureOutput]: (state, action) => ({
+    ...state,
+    isLoading: false,
+    temperatureOutput: action.payload
+  }),
 
-    case LOAD_FEEDS_FAILURE:
-      return {
-        ...state,
-        isLoading: false,
-        error: action.payload
-      };
-
-    default:
-      return state;
-  }
-}
+  [loadTemperatureOutputFailed]: (state, action) => ({
+    ...state,
+    isLoading: false,
+    error: action.payload
+  })
+});
 
 export default reducer;

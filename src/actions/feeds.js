@@ -1,26 +1,22 @@
-export const LOAD_FEEDS = 'LOAD_FEEDS';
-export const LOAD_FEEDS_SUCCESS = 'LOAD_FEEDS_SUCCESS';
-export const LOAD_FEEDS_FAILURE = 'LOAD_FEEDS_FAILURE';
+import { createAction } from '@reduxjs/toolkit';
 
-function loadTemperatureOutput() {
-  return {
-    type: LOAD_FEEDS
-  };
-}
+const loadTemperatureOutput = createAction('LOAD_FEEDS');
 
-function setTemperatureOutput(temperatureOutput) {
-  return {
-    type: LOAD_FEEDS_SUCCESS,
-    payload: temperatureOutput
-  };
-}
+const setTemperatureOutput = createAction(
+  'LOAD_FEEDS_SUCCESS',
+  (temperatureOutput) => ({
+    payload: temperatureOutput.records
+  })
+);
 
-function loadTemperatureOutputFailed(error) {
-  return {
-    type: LOAD_FEEDS_FAILURE,
-    payload: error
-  };
-}
+const loadTemperatureOutputFailed = createAction(
+  'LOAD_FEEDS_FAILURE',
+  (error) => ({
+    paylod: {
+      error: error
+    }
+  })
+);
 
 export {
   loadTemperatureOutput,

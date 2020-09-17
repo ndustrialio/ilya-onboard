@@ -3,6 +3,13 @@ import ravenService from './ravenService';
 import FeedsService from './feedsService';
 
 const contxtSdk = new ContxtSdk({
+  externalModules: {
+    feeds: {
+      clientId: window.nd.externalModules.feeds.clientId,
+      host: window.nd.externalModules.feeds.host,
+      module: FeedsService
+    }
+  },
   config: {
     auth: {
       clientId: window.nd.application.clientId,
@@ -12,13 +19,6 @@ const contxtSdk = new ContxtSdk({
         }
       },
       env: 'production'
-    },
-    externalModules: {
-      feeds: {
-        clientId: window.nd.externalModules.feeds.clientId,
-        host: window.nd.externalModules.feeds.host,
-        module: FeedsService
-      }
     },
     interceptors: {
       response: [

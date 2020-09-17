@@ -20,6 +20,9 @@ window.nd = {
     dataSourceName: `${faker.internet.url()}/`
   },
   externalModules: {
-    feeds: faker.random.uuid()
+    feeds: {
+      clientId: faker.random.uuid(),
+      host: faker.random.word()
+    }
   }
 };

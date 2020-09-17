@@ -103,6 +103,7 @@
     "@ndustrial/contxt-sdk": "2.13.1",
     "@ndustrial/nd-react-common": "~0.9.0",
     "@nivo/line": "^0.62.0",
+    "@reduxjs/toolkit": "^1.4.0",
     "auth0-js": "^9.5.1",
     "axios": "~0.17.1",
     "body-parser": "^1.18.3",

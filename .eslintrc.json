@@ -23,8 +23,7 @@
   },
   "plugins": ["react"],
   "rules": {
-    "no-unused-expressions": "off",
-    "react/display-name": "off"
+    "no-unused-expressions": "off"
   },
   "root": true
 }

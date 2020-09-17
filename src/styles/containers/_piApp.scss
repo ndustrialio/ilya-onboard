@@ -1,0 +1,6 @@
+.pi-container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: [start] 65px [header-end] 1fr [end];
+}
