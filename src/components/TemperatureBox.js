@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import { LineGraph } from './LineGraph/';
-import { Sidebar, SidebarPanel } from './index';
+import { Sidebar, Thermostat } from './index';
 
 const propTypes = {
   temperatureOutput: PropTypes.array.isRequired,
@@ -43,7 +43,7 @@ const TemperatureBox = ({ temperatureOutput, startDate, endDate }) => {
   const [temperature, setTemperature] = useState(Math.random() * 120);
 
   useEffect(() => {
-    setTimeout(() => {
+    setInterval(() => {
       setTemperature(Math.random() * 120);
     }, 5000);
   }, [temperatureOutput]);
@@ -52,7 +52,7 @@ const TemperatureBox = ({ temperatureOutput, startDate, endDate }) => {
     <div className={'temperature-box'}>
       <Sidebar
         render={() => {
-          return <SidebarPanel fahrenheit={temperature} />;
+          return <Thermostat fahrenheit={temperature} />;
         }}
       />
       <div className={'temperature-graph'}>

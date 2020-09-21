@@ -4,6 +4,7 @@
   max-height: 200px;
   display: flex;
   flex-direction: column;
+  border-radius: 5px;
 }
 
 .sidebar__heading {
@@ -15,6 +16,8 @@
   border-bottom: 1px solid var(--nd-color-primary-l1);
 }
 
+// TODO, break here into two files
+
 .thermostat {
   display: flex;
   flex-direction: row;
@@ -25,17 +28,56 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   width: 75px;
   height: 100%;
+  border-right: 1px solid var(--nd-color-primary-l1);
 }
 
-.temperature-box__thermometer {
-  // TODO: fix name
+.thermostat__thermometer {
   height: 120px;
+}
+
+.thermostat__max-reading {
+  font-size: 0.75rem;
+  margin-bottom: 0.5rem;
 }
 
 .temperature-readings {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  padding: 1rem;
+  justify-content: center;
+  align-items: flex-end;
+  font-size: 35px;
+}
+
+.temperature-readings__reading {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem 0;
+}
+
+.temperature-readings__value {
+  font-family: var(--nd-digital-font);
+}
+
+.temperature-readings__degree-symbol {
+  font-size: 1rem;
+  position: relative;
+  top: -2px;
+  margin-right: 5px;
+}
+
+.temperature-readings__degree-unit {
+  font-size: 1rem;
+}
+
+.temperature-readings__celsius {
+  color: var(--nd-color-type-light);
+
+  .temperature-readings__value {
+    font-size: 0.75em;
+  }
 }
