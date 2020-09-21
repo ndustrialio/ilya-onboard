@@ -1,0 +1,10 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--nd-color-bg-accent-2);
+  padding: 3rem;
+
+  > * {
+    flex-grow: 1;
+  }
+}

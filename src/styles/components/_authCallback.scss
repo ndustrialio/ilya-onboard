@@ -11,7 +11,7 @@
   right: 0;
   bottom: 0;
   background-color: var(--nd-color-primary);
-  color: $white;
+  color: var(--nd-color-white);
 
   &::before {
     content: '';
@@ -31,7 +31,6 @@
     }
 
     &__label {
-      @include rem(16);
       padding: 10px 0;
       /* stylelint-disable-next-line sh-waqar/declaration-use-variable */
       color: inherit;

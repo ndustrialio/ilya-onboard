@@ -1,6 +1,6 @@
 import { Switch, Route } from 'react-router-dom';
 import React from 'react';
-import { Loader } from '@ndustrial/nd-react-common';
+import { Loader } from '../components';
 import contxtService from '../services/contxt';
 
 export function withAuth(WrappedComponent, history) {

@@ -2,26 +2,15 @@ import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import { Loader } from '@ndustrial/nd-react-common';
+import { Loader } from '../components';
 import { withAPI } from '../api';
+import { getDateRange } from '../utils';
 import {
   loadTemperatureOutput,
   setTemperatureOutput,
   loadTemperatureOutputFailed
 } from '../actions/feeds';
 import TemperatureBox from '../components/TemperatureBox';
-
-const getStartingDateRange = () => {
-  const today = new Date();
-  const offset = 6 - today.getDay();
-  const startDate = new Date(new Date().setDate(today.getDate() - offset));
-  const endDate = new Date(new Date().setDate(startDate.getDate() + 6));
-
-  return {
-    startDate,
-    endDate
-  };
-};
 
 class TemperatureFeed extends Component {
   static propTypes = {
@@ -38,7 +27,7 @@ class TemperatureFeed extends Component {
 
   constructor(props) {
     super(props);
-    const { startDate, endDate } = getStartingDateRange();
+    const { startDate, endDate } = getDateRange();
     this.state = {
       startDate: startDate.toISOString(),
       endDate: endDate.toISOString(),

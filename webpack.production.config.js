@@ -65,7 +65,6 @@ module.exports = {
         NODE_ENV: JSON.stringify(process.env.NODE_ENV || 'production')
       }
     }),
-    // new webpack.optimize.UglifyJsPlugin(),
     new ImageminPlugin({ test: /\.(jpe?g|png|gif)$/i }),
     new ExtractTextPlugin('./static/styles/styles.css'),
     new HtmlWebpackPlugin({

@@ -1,6 +1,15 @@
+:root {
+  --nd-grid-template-rows: [start] 1fr [body-end] 50px [end];
+
+  @media (min-width: 700px) {
+    --nd-grid-template-rows: [start] 65px [header-end] 1fr [end];
+  }
+}
+
 .pi-container {
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-rows: [start] 65px [header-end] 1fr [end];
+  grid-template-rows: var(--nd-grid-template-rows);
+  grid-auto-flow: dense;
 }

@@ -1,0 +1,4 @@
+.thermometer-bar,
+.thermometer-arrow {
+  @include transition(all 0.5s cubic-bezier(0.3, 0.18, 0.7, 1.24));
+}

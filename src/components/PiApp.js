@@ -1,7 +1,9 @@
-import { Header } from '@ndustrial/nd-react-common';
+// import { Header } from '@ndustrial/nd-react-common';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { Routes } from '../routes/Routes';
+import logo from '../images/contxt_logo.svg';
+import { Header } from './index';
 
 export default class PiApp extends React.Component {
   static propTypes = {
@@ -38,10 +40,9 @@ export default class PiApp extends React.Component {
     return (
       <div className="pi-container">
         <Header
+          onLogout={this.logOut}
+          logo={logo}
           profile={this.state.profile}
-          {...this.props}
-          auth={{ logout: this.logOut }}
-          logoURL={require('../images/contxt_logo.svg')}
         />
         <Routes />
       </div>

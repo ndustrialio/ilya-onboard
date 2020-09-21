@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import { Loader } from '@ndustrial/nd-react-common';
 import * as facilitiesActionCreators from '../actions/facilities';
-import Facilities from '../components/Facilities';
+import { Facilities, Loader } from '../components/';
 import contxtSdk from '../services/contxt';
 
 class FacilitiesList extends Component {

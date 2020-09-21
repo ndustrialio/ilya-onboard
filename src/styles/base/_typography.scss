@@ -1,24 +1,11 @@
-html {
-  font-size: $nd-font-size;
-  font-family: $font-primary;
-  font-weight: 100;
-}
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,400,500,700,900');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300&display=swap');
 
-.uppercase {
-  text-transform: uppercase;
+@font-face {
+  font-family: 'Digital';
+  src: url('../../fonts/digital-7-mono.ttf') format('truetype'); /* Safari, Android, iOS */
 }
-
-.healthy {
-  font-weight: 700;
-  color: var(--nd-color-healthy);
-}
-
-.degraded {
-  font-weight: 700;
-  color: var(--nd-color-degraded);
-}
-
-.critical {
-  font-weight: 700;
-  color: var(--nd-color-critical);
+@font-face {
+  font-family: 'Digital Numbers';
+  src: url('../../fonts/DigitalNumbers-Regular.woff') format('woff'); /* Safari, Android, iOS */
 }

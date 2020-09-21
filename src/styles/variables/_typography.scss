@@ -1,5 +1,4 @@
-// Roboto
-@import url('https://fonts.googleapis.com/css?family=Roboto:100,400,500,700,900');
-
-$font-primary: 'Roboto', 'Arial', sans-serif;
-$nd-font-size: 16px;
+:root {
+  --nd-default-font: 'Lato', 'Roboto', 'Arial', sans-serif;
+  --nd-digital-font: 'Digital Numbers', 'Courier New', Courier, monospace;
+}

@@ -2,19 +2,16 @@
 //		Variables		//
 ////////////////
 @import 'variables/colors';
-@import 'variables/mixins';
 @import 'variables/typography';
-@import 'variables/globals';
 
 ////////////////
 //		BASE		//
 ////////////////
-@import 'base/main';
-@import 'base/colors';
 @import 'base/reset';
-@import '../../node_modules/@ndustrial/nd-react-common/dist/styles/components';
 @import 'base/typography';
+@import 'base/main';
 @import 'base/layout';
+@import 'base/mixins';
 
 ////////////////
 //		Containers		//
@@ -26,4 +23,9 @@
 ////////////////
 @import 'components/authCallback';
 @import 'components/facilitiesList';
+@import 'components/header';
+@import 'components/lineGraph';
+@import 'components/sidebar';
 @import 'components/temperatureBox';
+@import 'components/svg/thermometer';
+@import 'components/thermostat';

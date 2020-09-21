@@ -1,0 +1,41 @@
+.sidebar-panel {
+  background: var(--nd-color-bg-primary);
+
+  max-height: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar__heading {
+  color: var(--nd-color-primary);
+  font-size: 1.3rem;
+  text-align: center;
+  width: 100%;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--nd-color-primary-l1);
+}
+
+.thermostat {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+.thermostat__thermometer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75px;
+  height: 100%;
+}
+
+.temperature-box__thermometer {
+  // TODO: fix name
+  height: 120px;
+}
+
+.temperature-readings {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}

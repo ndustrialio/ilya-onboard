@@ -1,0 +1,81 @@
+.line-graph-point {
+  fill: transparent;
+  stroke: transparent;
+  stroke-width: 2;
+}
+
+.line-graph-point--intialized {
+  @include animation(initial-show-point 1s ease-out forwards);
+}
+
+.line-graph-point--clicked {
+  @include animation(show-point 0.25s ease-out forwards);
+}
+
+.tooltip {
+  display: flex;
+  flex-direction: row;
+  background: var(--nd-color-white);
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2);
+  padding: 0.5rem;
+}
+
+.tooltip__color-swatch {
+  display: flex;
+  position: relative;
+  top: 2px;
+}
+
+.color-swatch-square {
+  width: 0.8rem;
+  height: 0.8rem;
+}
+
+.tooltip__values {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+
+  > span:first-child {
+    margin-bottom: 5px;
+  }
+}
+
+@include keyframes(show-point) {
+  0% {
+    stroke: transparent;
+    r: 5;
+  }
+  5% {
+    stroke: var(--nd-color-primary);
+  }
+  80% {
+    r: 7;
+    fill: transparent;
+  }
+  100% {
+    stroke: var(--nd-color-primary);
+    r: 5;
+    fill: var(--nd-color-primary);
+  }
+}
+
+@include keyframes(initial-show-point) {
+  0% {
+    stroke: transparent;
+    r: 0;
+  }
+  5% {
+    stroke: var(--nd-color-primary);
+  }
+  30% {
+    r: 5;
+  }
+  80% {
+    stroke: var(--nd-color-primary);
+  }
+  100% {
+    stroke: transparent;
+    r: 5;
+  }
+}

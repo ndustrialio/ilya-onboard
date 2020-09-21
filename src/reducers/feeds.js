@@ -24,7 +24,10 @@ const reducer = createReducer(INITIAL_STATE, {
   [setTemperatureOutput]: (state, action) => ({
     ...state,
     isLoading: false,
-    temperatureOutput: action.payload
+    temperatureOutput: action.payload.map((event) => ({
+      ...event,
+      value: Number.parseFloat(event.value)
+    }))
   }),
 
   [loadTemperatureOutputFailed]: (state, action) => ({
